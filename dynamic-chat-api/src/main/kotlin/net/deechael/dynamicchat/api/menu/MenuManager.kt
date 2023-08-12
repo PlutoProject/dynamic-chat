@@ -2,6 +2,12 @@ package net.deechael.dynamicchat.api.menu
 
 interface MenuManager {
 
+    fun isOn(): Boolean
+
+    fun turnOn()
+
+    fun turnOff()
+
     fun getMaxRegisteredIndex(): Int
 
     fun getMinRegisteredIndex(): Int

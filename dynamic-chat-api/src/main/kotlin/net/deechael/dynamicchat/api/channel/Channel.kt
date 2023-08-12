@@ -3,7 +3,7 @@ package net.deechael.dynamicchat.api.channel
 import net.deechael.dynamicchat.api.Time
 import net.deechael.dynamicchat.api.chat.ChatFormat
 import net.deechael.dynamicchat.api.context.Context
-import net.deechael.dynamicchat.api.message.Message
+import net.deechael.dynamicchat.api.message.PublicMessage
 import net.deechael.dynamicchat.api.punishment.Punishment
 import net.deechael.dynamicchat.api.user.User
 import net.kyori.adventure.text.Component
@@ -68,13 +68,13 @@ interface Channel {
 
     fun getContext(fromIndex: Int, length: Int): Context
 
-    fun getContext(start: Message, length: Int): Context
+    fun getContext(start: PublicMessage, length: Int): Context
 
     fun getContext(last: Int): Context
 
-    fun getMessageById(id: String): Message
+    fun getMessageById(id: String): PublicMessage
 
-    fun getMessageByIndex(index: Int): Message
+    fun getMessageByIndex(index: Int): PublicMessage
 
     fun broadcast(message: Component)
 
