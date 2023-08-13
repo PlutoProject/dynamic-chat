@@ -1,0 +1,5 @@
+name: DynamicChatWorker
+bootstrapper: net.deechael.dynamicchat.worker.DynamicChatWorkerBootstrap
+version: ${version}
+main: net.deechael.dynamicchat.worker.DynamicChatWorker
+api-version: "1.20"

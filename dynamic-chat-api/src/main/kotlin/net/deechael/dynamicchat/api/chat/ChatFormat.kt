@@ -15,7 +15,11 @@ interface ChatFormat {
 
         fun appendMessage(serializer: (Message) -> Component): Builder
 
-        fun appendText(serializer: (Message) -> Component): Builder
+        fun appendComponent(serializer: (Message) -> Component): Builder
+
+        fun appendText(serializer: (Message) -> String): Builder
+
+        fun appendText(text: String): Builder
 
         fun hover(serializer: (Message) -> Component): Builder
 

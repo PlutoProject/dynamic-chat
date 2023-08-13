@@ -11,3 +11,5 @@ plugins {
 
 rootProject.name = "dynamic-chat"
 include("dynamic-chat-api")
+include("dynamic-chat-proxy")
+include("dynamic-chat-worker")

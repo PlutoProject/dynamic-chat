@@ -2,6 +2,7 @@ package net.deechael.dynamicchat.api
 
 import net.deechael.dynamicchat.api.channel.ChannelManager
 import net.deechael.dynamicchat.api.chat.ChatManager
+import net.deechael.dynamicchat.api.event.EventManager
 import net.deechael.dynamicchat.api.menu.MenuManager
 
 interface DynamicChatService {
@@ -11,6 +12,8 @@ interface DynamicChatService {
     fun getChatManager(): ChatManager
 
     fun getMenuManager(): MenuManager
+
+    fun getEventManager(): EventManager
 
     companion object {
 

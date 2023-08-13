@@ -1,10 +1,7 @@
 package net.deechael.dynamicchat.api.channel
 
-import net.deechael.dynamicchat.api.Time
 import net.deechael.dynamicchat.api.chat.ChatFormat
-import net.deechael.dynamicchat.api.context.Context
-import net.deechael.dynamicchat.api.message.PublicMessage
-import net.deechael.dynamicchat.api.punishment.Punishment
+import net.deechael.dynamicchat.api.chat.ChatHistory
 import net.deechael.dynamicchat.api.user.User
 import net.kyori.adventure.text.Component
 import java.util.Date
@@ -48,34 +45,10 @@ interface Channel {
 
     fun drop(): Boolean
 
+    fun isDroppable(): Boolean
+
     fun isDropped(): Boolean
 
-    fun mute(user: User): Boolean
-
-    fun mute(user: User, time: Time): Boolean
-
-    fun mute(user: User, reason: String): Boolean
-
-    fun mute(user: User, reason: String, time: Time): Boolean
-
-    fun unmute(user: User)
-
-    fun isMuted(user: User)
-
-    fun getMuteHistory(user: User): List<Punishment>
-
-    fun getMessageLength(): Int
-
-    fun getContext(fromIndex: Int, length: Int): Context
-
-    fun getContext(start: PublicMessage, length: Int): Context
-
-    fun getContext(last: Int): Context
-
-    fun getMessageById(id: String): PublicMessage
-
-    fun getMessageByIndex(index: Int): PublicMessage
-
-    fun broadcast(message: Component)
+    fun getChatHistory(): ChatHistory
 
 }

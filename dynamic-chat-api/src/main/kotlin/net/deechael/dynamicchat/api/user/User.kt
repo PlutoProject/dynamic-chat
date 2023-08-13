@@ -1,6 +1,7 @@
 package net.deechael.dynamicchat.api.user
 
 import net.deechael.dynamicchat.api.channel.Channel
+import net.deechael.dynamicchat.api.channel.PrivateChannel
 import net.kyori.adventure.text.Component
 import java.util.UUID
 
@@ -12,7 +13,7 @@ interface User {
 
     fun sendMessage(message: Component)
 
-    fun whisperTo(who: User, message: Component)
+    fun whisperTo(who: User, message: Component): PrivateChannel
 
     fun say(message: Component)
 

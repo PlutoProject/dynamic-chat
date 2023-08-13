@@ -1,4 +1,4 @@
-package net.deechael.dynamicchat.api.context
+package net.deechael.dynamicchat.api.chat
 
 import net.deechael.dynamicchat.api.channel.Channel
 import net.deechael.dynamicchat.api.message.Message
