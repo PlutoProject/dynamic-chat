@@ -21,9 +21,4 @@ interface MenuManager {
      */
     fun registerMenuButton(index: Int, button: MenuButton)
 
-    /**
-     * This button will only be seen when sender clicked
-     */
-    fun registerSenderMenuButton(index: Int, button: MenuButton)
-
 }

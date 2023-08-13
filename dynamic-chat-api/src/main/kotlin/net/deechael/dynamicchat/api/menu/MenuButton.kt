@@ -6,7 +6,10 @@ import net.kyori.adventure.text.Component
 
 interface MenuButton {
 
-    fun render(invoker: User, message: Message): Component
+    /**
+     * Null for not rendering for this invoker
+     */
+    fun render(invoker: User, message: Message): Component?
 
     fun hover(invoker: User, message: Message): Component {
         return Component.empty()
